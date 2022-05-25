@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import postRoutes from './routes/posts.js';
+import calorieRoutes from './routes/calories.js';
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }))
 app.use(cors());
 
 app.use('/posts', postRoutes);
+app.use('/calories', calorieRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://payneskyler:hellotest@cluster0.ovg08.mongodb.net/reactapp?authSource=admin&replicaSet=atlas-10aip4-shard-0&readPreference=primary&ssl=true';
 const PORT = process.env.PORT|| 5001;
