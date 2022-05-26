@@ -1,0 +1,33 @@
+-git pull origin dev DAILY!!! and npm i before any coding session
+
+
+
+
+
+Tuesday/Wednesday(24th & 25th):
+
+    -work on lifestyle
+
+
+    -work on recipes
+    
+    
+    -creating user authentication profile and adding to that profile
+
+
+
+
+-calorie API 
+
+
+-google authentication
+
+
+
+
+
+
+
+
+
+
