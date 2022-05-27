@@ -16,7 +16,7 @@ export const getPosts = async (req, res) =>{
 
 export const createPost = async (req, res) =>{
     const post = req.body;
-    const newPost = new PostMessage(post);
+    const newPost = new PostMessage({...post, creator: req.userId, createdAt: new Date().toISOString()});
 
     try{
         await newPost.save();
@@ -64,6 +64,8 @@ export const likePost = async (req,res) =>{
         post.likes = post.likes.filter((id)=> id !== String(req.userId));
     }
 
-    const updatePost = await PostMessage.findByIdAndUpdate(id, post, { likeCount: post.likeCount + 1}, {new: true})
+    const updatePost = await PostMessage.findByIdAndUpdate(id, post, {new: true})
     res.json(updatePost);
 }
+
+export default router;

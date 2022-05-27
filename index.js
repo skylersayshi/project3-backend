@@ -20,7 +20,7 @@ app.use('/posts', postRoutes);
 app.use('/users', userRoutes);
 app.use('/calories', calorieRoutes);
 
-const CONNECTION_URL = process.env.CONNECTION_URL
+
 const PORT = process.env.PORT || 5001;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
