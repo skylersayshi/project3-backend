@@ -4,7 +4,7 @@ const router = express.Router();
 
 export const getCalories = async (req, res) =>{
     try{
-        const calories = await ('https://swapi.dev/api/people/1')
+        const calories = await ('https://api.calorieninjas.com/v1/nutrition?query=')
         // ('https://nutritionix-api.p.rapidapi.com/v1_1/item')
         console.log(calories);
 

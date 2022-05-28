@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+
 import postRoutes from './routes/posts.js';
 import calorieRoutes from './routes/calories.js';
 
@@ -17,6 +18,7 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 app.use('/calories', calorieRoutes);
+
 
 const CONNECTION_URL = process.env.CONNECTION_URL
 const PORT = process.env.PORT || 5001;
