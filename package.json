@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,11 +20,15 @@
   },
   "homepage": "https://github.com/giantnerd123/project3-backend#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "google-auth-library": "^8.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "mongodb": "^4.6.0",
     "mongoose": "^5.9.29"
   }
 }
