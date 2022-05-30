@@ -5,9 +5,11 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 
+import Recipe from './models/recipe.js'
 import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
 import calorieRoutes from './routes/calories.js';
+import recipeRoutes from './routes/recipe.js'
 
 const app = express();
 
@@ -25,6 +27,8 @@ app.get('/favicon.ico', (req,res)=>{
 app.use('/posts', postRoutes);
 app.use('/users', userRoutes);
 app.use('/calories', calorieRoutes);
+app.use('/recipes', recipeRoutes)
+
 
 
 const CONNECTION_URL = process.env.CONNECTION_URL
@@ -36,4 +40,5 @@ mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnified
 
 mongoose.set('useFindAndModify', false);
 
+export default mongoose
 app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`))
