@@ -3,12 +3,9 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
-
 import Recipe from './models/recipe.js'
 import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
-import calorieRoutes from './routes/calories.js';
 import recipeRoutes from './routes/recipe.js'
 
 const app = express();
@@ -26,7 +23,6 @@ app.get('/favicon.ico', (req,res)=>{
 
 app.use('/posts', postRoutes);
 app.use('/users', userRoutes);
-app.use('/calories', calorieRoutes);
 app.use('/recipes', recipeRoutes)
 
 
