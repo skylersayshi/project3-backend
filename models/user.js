@@ -14,8 +14,22 @@ const userSchema = mongoose.Schema({
         required: true
     },
     id: {
-        type: String
+        type: String,
+    },
+    bio: {
+        type: String,
+    },
+    selectedFileProfile: String,
+    selectedFileBanner: String,
+    favRecipes: [{
+        name: String,
+        ingredients: String,
+        instructions: String,
+        img: String,
     }
+    ],
+    myCalories: Number,
+
 });
 
 export default mongoose.model("User", userSchema);
