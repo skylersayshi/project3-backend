@@ -15,6 +15,7 @@ const postSchema = mongoose.Schema({
         type: Date,
         default: new Date()
     },
+    profilePic: String,
 });
 
 const PostMessage = mongoose.model('PostMessage', postSchema);
