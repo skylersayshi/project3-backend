@@ -22,7 +22,7 @@ app.get('/favicon.ico', (req,res)=>{
 
 
 app.use('/posts', postRoutes);
-app.use('/profile', userRoutes);
+app.use('/users', userRoutes);
 app.use('/recipes', recipeRoutes)
 
 
