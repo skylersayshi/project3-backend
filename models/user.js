@@ -1,26 +1,21 @@
 import mongoose from 'mongoose';
 
 const userSchema = mongoose.Schema({
-    name: { 
+    firstName: { 
         type: String,
         required: true
     },
-    email: {
+    lastName: { 
         type: String,
         required: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    id: {
-        type: String,
     },
     bio: {
         type: String,
     },
     selectedFile: String,
-    selectedFileBanner: String,
+    banner: {
+        type: String,
+    },
     favRecipes: [{
         name: String,
         ingredients: String,

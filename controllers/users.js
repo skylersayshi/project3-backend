@@ -43,14 +43,3 @@ export const signup = async(req,res)=>{
         console.log(error);
     }
 }
-
-export const getProfile = async (req, res) =>{
-    try{
-        const userData = await User.find();
-        console.log(userData);
-
-        res.status(200).json(userData);
-    } catch(error){
-        res.status(404).json({message: error.message});
-    }
-}

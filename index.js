@@ -6,7 +6,8 @@ import dotenv from 'dotenv';
 import Recipe from './models/recipe.js'
 import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
-import recipeRoutes from './routes/recipe.js'
+import recipeRoutes from './routes/recipe.js';
+import profileRoutes from './routes/profile';
 
 const app = express();
 
@@ -23,7 +24,8 @@ app.get('/favicon.ico', (req,res)=>{
 
 app.use('/posts', postRoutes);
 app.use('/users', userRoutes);
-app.use('/recipes', recipeRoutes)
+app.use('/recipes', recipeRoutes);
+app.use('/profile', profileRoutes)
 
 
 
