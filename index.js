@@ -3,10 +3,9 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import Recipe from './models/recipe.js'
 import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
-import recipeRoutes from './routes/recipe.js'
+import recipeRoutes from './routes/recipe.js';
 
 const app = express();
 

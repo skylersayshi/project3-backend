@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
         type: String,
     },
     selectedFile: String,
-    selectedFileBanner: String,
+    banner: String,
     favRecipes: [{
         name: String,
         ingredients: String,
