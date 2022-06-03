@@ -5,7 +5,7 @@ import auth from '../middleware/auth.js';
 const router = express.Router();
 
 router.get('/', getRecipes);
-router.get('/:id', auth, getRecipe);
+router.get('/:id', getRecipe);
 router.post('/', auth, createRecipe);
 router.patch('/:id', auth, updateRecipe);
 router.delete('/:id', auth, deleteRecipe);

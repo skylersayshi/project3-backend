@@ -41,11 +41,11 @@ export const createRecipe = async (req, res) => {
 export const updateRecipe = async (req, res) =>{
     const { id } = req.params;
 
-    const { name, ingredients, description, img } = req.body;
+    const { name, ingredients, instructions, img } = req.body;
     
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No recipe with id: ${id}`);
 
-    const updatedRecipe = { name, ingredients, description, img, id: _id };
+    const updatedRecipe = { name, ingredients, instructions, img, id: _id };
 
     await Recipe.findByIdAndUpdate(id, updatedRecipe, { new: true });
 
