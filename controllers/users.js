@@ -1,6 +1,7 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import User from '../models/user.js';
+import mongoose from "mongoose";
 
 export const signin = async(req,res)=>{
     const { email, password } = req.body;
@@ -44,13 +45,26 @@ export const signup = async(req,res)=>{
     }
 }
 
-export const getProfile = async (req, res) =>{
+export const getprofiles = async (req, res) =>{
     try{
-        const userData = await User.find();
-        console.log(userData);
+        const profiles = await User.find();
 
-        res.status(200).json(userData);
+        res.status(200).json(profiles);
     } catch(error){
         res.status(404).json({message: error.message});
     }
+}
+
+export const updateprofile = async (req, res) =>{
+    const { id } = req.params;
+
+    const { name, bio, myCalories, selectedFile } = req.body;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No user with id: ${id}`);
+
+    const updatedUser = { name, bio, selectedFile, myCalories, _id: id};
+
+    await User.findByIdAndUpdate(id, updatedUser, { new: true });
+
+    res.json(updatedUser);
 }
