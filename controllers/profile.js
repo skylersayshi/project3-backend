@@ -17,10 +17,10 @@ export const getProfile = async (req, res) =>{
 
 export const createProfile = async (req, res) =>{
     const profile = req.body;
-    const newUserInfo = new Profile({...profile, firstName: req.firstName, lastName: req.lastName, bio: req.bio, banner: req.banner, selectedFile: req.selectedFile, profilePic: req.profilePic, });
+    const newUserInfo = new Profile({...profile, firstName: firstName, lastName: req.lastName, bio: req.bio, banner: req.banner, selectedFile: req.selectedFile, profilePic: req.profilePic, });
 
     try{
-        await Profile.save();
+        await newUserInfo.save();
         res.status(201).json(newUserInfo);
     } catch(error){
         res.status(409).json({message: error.message});
