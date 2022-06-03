@@ -1,11 +1,12 @@
 import express from 'express';
-const router = express.Router();
 import auth from '../middleware/auth.js';
 
-import { createProfile, getProfile, updateProfile } from '../controllers/profile'
+import { createProfile, getProfile, updateProfile } from '../controllers/profile.js'
 
-router.get('/', auth, getProfile)
-router.post('/', auth, createProfile)
+const router = express.Router();
+
+router.get('/', getProfile)
+router.post('/', createProfile)
 router.put('/',  updateProfile)
 
 

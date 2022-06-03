@@ -7,7 +7,7 @@ import Recipe from './models/recipe.js'
 import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
 import recipeRoutes from './routes/recipe.js';
-import profileRoutes from './routes/profile';
+import profileRoutes from './routes/profile.js';
 
 const app = express();
 

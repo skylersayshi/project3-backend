@@ -1,10 +1,8 @@
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
 import User from '../models/user.js';
 import express from "express";
 import mongoose from "mongoose";
 
-
+const router = express.Router();
 
 export const getProfile = async (req, res) =>{
     try{
@@ -31,8 +29,9 @@ export const createProfile = async (req, res) =>{
 
 export const updateProfile = async (req, res) =>{
     const { id } = req.params;
-    // const { firstName, lastName, banner, selectedFile, bio, profilePic } = req.body;
+    const { firstName, lastName, banner, selectedFile, bio, profilePic } = req.body;
     
+    console.log(req.body)
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
 
     const updatedProfile = { firstName, lastName, banner, selectedFile, bio, profilePic, _id: id};
@@ -41,3 +40,5 @@ export const updateProfile = async (req, res) =>{
 
     res.json(updatedProfile);
 }
+
+export default router;
