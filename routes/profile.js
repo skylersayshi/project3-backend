@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', getProfile)
 router.post('/', createProfile)
-router.put('/',  updateProfile)
+router.patch('/',  updateProfile)
 
 
 
