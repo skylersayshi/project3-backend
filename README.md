@@ -18,7 +18,7 @@ Functionality added allowing users to only modify/delete posts or recipes that t
 
 Link to front-end & back-end github repo:
 
-  -https://github.com/giantnerd123/project3-frontend.git
-  -https://github.com/giantnerd123/project3-backend.git
+      -https://github.com/giantnerd123/project3-frontend.git
+      -https://github.com/giantnerd123/project3-backend.git
 
 
