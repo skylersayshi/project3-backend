@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
         type: String,
     },
     selectedFile: String,
-    banner: String,
+    banner: { type: String, },
     favRecipes: [{
         name: String,
         ingredients: String,
@@ -28,7 +28,6 @@ const userSchema = mongoose.Schema({
         img: String,
     }
     ],
-    myCalories: Number,
 
 });
 
