@@ -4,9 +4,6 @@
 
 Backend of health blog app that allows users to postadd/edit/delete updates about anything, filter through a list of food items and find calorie counts, and view/add/edit/delete healthy recipes.
 
-##Technologies Used:
-
-MongoDB, Mongoose, Express.js and Node.js.
 
 ###Features:
 
@@ -17,6 +14,10 @@ Schema's created using CRUD-ability for users to create/modify/delete posts and 
 
 Routes created to access schemas allowing access for users to render content on browser. 
 
+
+##Technologies Used:
+
+MongoDB, Mongoose, Express.js and Node.js.
 
 
 ###Link to front-end & back-end github repo:
